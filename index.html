@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Caradonna</title>
+    <!--downloaded favicon from https://icons8.com/icons/set/favicon-->
+    <link rel="icon" type="image/x-icon" href="./img/icons8-favicon-64.png">
+    <!--CSS libraries / files-->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!--JS libraries / files-->
+    <script src="./js/script.js"></script>
+    <!--Script to show hidden section on button click from https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp-->
+  </head>
+  <body>
+    <header>
+      <div id="top-heading">
+        <h1>
+          Welcome to the Interactive ABCs of CSS Technology learning Website
+        </h1>
+      </div>
+      <br>
+      <div id="lower-heading">
+        <h1>
+          Click on the buttons below to reveal and learn the CSS technology
+          features of the corresponding letters
+        </h1>
+      </div>
+    </header>
+    <!--Main content div-->
+    <div id="hidden-content"></div>
+    <div id="buttons"></div>
+
+    <!--Grid from https://www.w3schools.com/css/css_grid.asp-->
+    <div class="grid-container">
+      <div class="grid-item">
+        <img
+          id="hiddenA"
+          src="./img/css-letter-a.png"
+          alt="A is for aspect ratio"
+        >
+        <div id="hiddenA2">
+          <div class="grid-item">
+            <button class="button-hide" onclick="hiddenA()">Hide Result</button>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img
+          id="hiddenB"
+          src="./img/css-letter-b.png"
+          alt="A is for aspect ratio"
+        >
+        <div id="hiddenB2">
+          <div class="grid-item">
+            <button class="button-hide" onclick="hiddenB()">Hide Result</button>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <img
+          id="hiddenC"
+          src="./img/css-letter-c.png"
+          alt="A is for aspect ratio"
+        >
+        <div id="hiddenC2">
+          <div class="grid-item">
+            <button class="button-hide" onclick="hiddenC()">Hide Result</button>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <button class="button-open" onclick="hiddenA()">A</button>
+      </div>
+      <div class="grid-item">
+        <button class="button-open" onclick="hiddenB()">B</button>
+      </div>
+      <div class="grid-item">
+        <button class="button-open" onclick="hiddenC()">C</button>
+      </div>
+    </div>
+  </body>
+</html>
