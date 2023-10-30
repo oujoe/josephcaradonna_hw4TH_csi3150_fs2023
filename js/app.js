@@ -241,7 +241,7 @@ function carFilter() {
     usedCar.color = usedCar.color.toLocaleString();
     usedCar.gasMileage = usedCar.gasMileage.toLocaleString();
 
-    if (usedCar.year >= minimumYear && usedCar.year <= maximumYear &&) {
+    if (usedCar.year >= minimumYear && usedCar.year <= maximumYear) {
       const carContainer = document.getElementById("carCards");
       // generate the card for each car
       const carCard = document.createElement("div");
