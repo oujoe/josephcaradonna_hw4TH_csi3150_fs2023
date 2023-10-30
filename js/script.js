@@ -258,6 +258,10 @@ function carFilter() {
     </div>
     `;
       carContainer.appendChild(carCard);
+    } else if (minimumYear > 2020 ){
+      document.getElementById("carCards").innerHTML = "No cars match the selected criteria. Please try again.";
+    } else if (maximumYear < 2014 ){
+      document.getElementById("carCards").innerHTML = "No cars match the selected criteria. Please try again.";
     }
   });
 }
