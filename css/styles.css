@@ -2,98 +2,62 @@
 body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-/* Headings */
-#top-heading {
+/* style the layout of header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #242423;
+}
+
+h2 {
   text-align: center;
-  font-size: 12px;
-  border: 2px solid orange;
-  margin: 3px;
+  color: lightseagreen;
 }
 
-#lower-heading {
-  text-align: center;
-  font-size: 12px;
-  border: 2px solid orange;
-  margin: 3px;
-}
-
-/* Styling hidden sections */
-#hiddenA {
-  margin-top: 10px;
-  display: none;
-}
-
-#hiddenA2 {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: none;
-  border: 2px solid orange;
-  border-top: none;
-}
-
-#hiddenB {
-  margin-top: 10px;
-  display: none;
-}
-
-#hiddenB2 {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: none;
-  border: 2px solid orange;
-  border-top: none;
-}
-
-#hiddenC {
-  margin-top: 10px;
-  display: none;
-}
-
-#hiddenC2 {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: none;
-  border: 2px solid orange;
-  border-top: none;
-}
-
-/* Create grid for items */
-.grid-container {
-  display: grid;
-  grid-template-rows: 400px 50px;
-  grid-template-columns: 350px 350px 350px;
-  justify-content: center;
-  grid-gap: 50px;
-}
-
-.grid-item {
+h3 {
   text-align: center;
 }
 
-/* Style buttons */
-.button-open {
-  text-align: center;
-  font-size: 12px;
-  border: 2px solid orange;
-  margin: 3px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-.button-hide {
-  text-align: center;
-  font-size: 12px;
-  border: 2px solid black;
-  margin: 3px;
+#info {
+  background-color: lightseagreen;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 100px;
-  padding-right: 100px;
-  background-color: rgb(0, 100, 200);
-  color: white;
-  font-size: 18px;
+}
+
+.carFilter {
+  padding: 20px;
+  background-color: lightblue;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.carContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#carCards {
+  padding: 10px;
+  background-color: darkgray;
+  display: flex;
+  flex-wrap: wrap;
+  border: 3px solid black;
+  line-height: 3px;
+}
+
+img {
+  height: 200px;
+  width: 280px;
+}
+
+#carCard {
+  border: 2px solid black;
+  margin: 5px;
 }

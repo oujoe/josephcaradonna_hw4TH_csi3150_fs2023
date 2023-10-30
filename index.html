@@ -1,83 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joseph Caradonna</title>
     <!--downloaded favicon from https://icons8.com/icons/set/favicon-->
-    <link rel="icon" type="image/x-icon" href="./img/icons8-favicon-64.png">
+    <link rel="icon" type="image/x-icon" href="./img/icons8-favicon-64.png" />
     <!--CSS libraries / files-->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css" />
     <!--JS libraries / files-->
-    <script src="./js/script.js"></script>
-    <!--Script to show hidden section on button click from https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp-->
   </head>
   <body>
     <header>
-      <div id="top-heading">
-        <h1>
-          Welcome to the Interactive ABCs of CSS Technology learning Website
-        </h1>
-      </div>
-      <br>
-      <div id="lower-heading">
-        <h1>
-          Click on the buttons below to reveal and learn the CSS technology
-          features of the corresponding letters
-        </h1>
-      </div>
+      <nav class="navbar">
+        <h2>Joe's Used Cars</h2>
+      </nav>
     </header>
-    <!--Main content div-->
-    <div id="hidden-content"></div>
-    <div id="buttons"></div>
+    <!--Filter div-->
+    <div class="carFilter">
+      <button onclick="carFilter()">Filter Cars</button>
+      <input
+        name="minimumYear"
+        value="2010"
+        type="number"
+        maxlength="4"
+        id="minimumYear"
+        class="filter"
+        placeholder="Minimum Year"
+      />
+      <input
+        name="maximumYear"
+        value="2023"
+        type="text"
+        maxlength="4"
+        id="maximumYear"
+        class="filter"
+        placeholder="Maximum Year"
+      />
 
-    <!--Grid from https://www.w3schools.com/css/css_grid.asp-->
-    <div class="grid-container">
-      <div class="grid-item">
-        <img
-          id="hiddenA"
-          src="./img/css-letter-a.png"
-          alt="A is for aspect ratio"
-        >
-        <div id="hiddenA2">
-          <div class="grid-item">
-            <button class="button-hide" onclick="hiddenA()">Hide Result</button>
-          </div>
+      <ul class="car-makes">
+        <div class="menu">
+          <li>
+            <input
+              type="checkbox"
+              labelid="Toyota"
+              name="Toyota"
+              value="Toyota"
+              checked
+            />
+            <label for="Toyota">Toyota</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Honda"
+              name="Honda"
+              value="Honda"
+              checked
+            />
+            <label for="Honda">Honda</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Ford"
+              name="Ford"
+              value="Ford"
+              checked
+            />
+            <label for="Ford">Ford</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Nissan"
+              name="Nissan"
+              value="Nissan"
+              checked
+            />
+            <label for="Nissan">Nissan</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Chevrolet"
+              name="Chevrolet"
+              value="Chevrolet"
+              checked
+            />
+            <label for="Chevrolet">Chevrolet</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Volkswagen"
+              name="Volkswagen"
+              value="Volkswagen"
+              checked
+            />
+            <label for="Volkswagen">Volkswagen</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Hyundai"
+              name="Hyundai"
+              value="Hyundai"
+              checked
+            />
+            <label for="Hyundai">Hyundai</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Subaru"
+              name="Subaru"
+              value="Subaru"
+              checked
+            />
+            <label for="Subaru">Subaru</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Mazda"
+              name="Mazda"
+              value="Mazda"
+              checked
+            />
+            <label for="Mazda">Mazda</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Kia"
+              name="Kia"
+              value="Kia"
+              checked
+            />
+            <label for="Kia">Kia</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Dodge"
+              name="Dodge"
+              value="Dodge"
+              checked
+            />
+            <label for="Dodge">Dodge</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Cadillac"
+              name="Cadillac"
+              value="Cadillac"
+              checked
+            />
+            <label for="Cadillac">Cadillac</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Jaguar"
+              name="Jaguar"
+              value="Jaguar"
+              checked
+            />
+            <label for="Jaguar">Jaguar</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Tesla"
+              name="Tesla"
+              value="Tesla"
+              checked
+            />
+            <label for="Tesla">Tesla</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Porsche"
+              name="Porsche"
+              value="Porsche"
+              checked
+            />
+            <label for="Porsche">Porsche</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Lexus"
+              name="Lexus"
+              value="Lexus"
+              checked
+            />
+            <label for="Lexus">Lexus</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="BMW"
+              name="BMW"
+              value="BMW"
+              checked
+            />
+            <label for="BMW">BMW</label>
+          </li>
         </div>
-      </div>
-      <div class="grid-item">
-        <img
-          id="hiddenB"
-          src="./img/css-letter-b.png"
-          alt="A is for aspect ratio"
-        >
-        <div id="hiddenB2">
-          <div class="grid-item">
-            <button class="button-hide" onclick="hiddenB()">Hide Result</button>
-          </div>
+      </ul>
+      <input
+        name="minimumMiles"
+        type="text"
+        maxlength="10"
+        id="minimumMiles"
+        class="filter"
+        placeholder="Minimum Miles"
+      />
+      <input
+        name="maximumMiles"
+        type="text"
+        maxlength="10"
+        id="maximumMiles"
+        class="filter"
+        placeholder="Maximum Miles"
+      />
+      <input
+        name="minimumPrice"
+        type="text"
+        maxlength="10"
+        id="minimumPrice"
+        class="filter"
+        placeholder="Minimum Price"
+      />
+      <input
+        name="maximumPrice"
+        type="text"
+        maxlength="10"
+        id="maximumPrice"
+        class="filter"
+        placeholder="Maximum Price"
+      />
+      <ul class="car-colors">
+        <div class="menu">
+          <li>
+            <input
+              type="checkbox"
+              labelid="Silver"
+              name="Silver"
+              value="Silver"
+              checked
+            />
+            <label for="Silver">Silver</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="White"
+              name="White"
+              value="White"
+              checked
+            />
+            <label for="White">White</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Black"
+              name="Black"
+              value="Black"
+              checked
+            />
+            <label for="Black">Black</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Blue"
+              name="Blue"
+              value="Blue"
+              checked
+            />
+            <label for="Blue">Blue</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Red"
+              name="Red"
+              value="Red"
+              checked
+            />
+            <label for="Red">Red</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Gray"
+              name="Gray"
+              value="Gray"
+              checked
+            />
+            <label for="Grar">Gray</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              labelid="Green"
+              name="Green"
+              value="Green"
+              checked
+            />
+            <label for="Green">Green</label>
+          </li>
         </div>
-      </div>
-      <div class="grid-item">
-        <img
-          id="hiddenC"
-          src="./img/css-letter-c.png"
-          alt="A is for aspect ratio"
-        >
-        <div id="hiddenC2">
-          <div class="grid-item">
-            <button class="button-hide" onclick="hiddenC()">Hide Result</button>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <button class="button-open" onclick="hiddenA()">A</button>
-      </div>
-      <div class="grid-item">
-        <button class="button-open" onclick="hiddenB()">B</button>
-      </div>
-      <div class="grid-item">
-        <button class="button-open" onclick="hiddenC()">C</button>
-      </div>
+      </ul>
     </div>
+    <!--Cars div-->
+    <div class="carContainer"><div id="carCards"></div></div>
+    <script src="./js/app.js"></script>
   </body>
 </html>
